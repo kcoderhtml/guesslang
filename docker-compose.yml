@@ -1,10 +1,8 @@
-version: '3.8'
-
 services:
   web:
     build: .
     ports:
-      - "5000:5000"
+      - "44317:5000"
     volumes:
       - .:/python-docker
     command: ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
