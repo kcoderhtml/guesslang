@@ -12,8 +12,8 @@ def detect_language():
     return jsonify({'language': language})
 
 @app.route('/')
-    def hello_world():
-        return 'Hello World from Guesslang server!'
+def hello_world():
+    return 'Hello World from Guesslang server!'
 
 if __name__ == '__main__':
     app.run(debug=True)
