@@ -6,8 +6,7 @@ guess = Guess()
 
 @app.route('/detect', methods=['POST'])
 def detect_language():
-    data = request.get_json()
-    text = data.get('text', '')
+    text = request.data.decode('utf-8')
     language = guess.language_name(text)
     return jsonify({'language': language})
 
